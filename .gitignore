@@ -1,0 +1,91 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python bytecode & cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Testing & quality caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyright/
+.coverage
+htmlcov/
+coverage.xml
+
+# Build & packaging artifacts
+build/
+dist/
+release_staging/
+packaging/output/
+*.egg-info/
+node_modules/
+*.exe
+*.zip
+*.lnk
+*.iso
+
+# Local data & databases
+data/*.db
+data/**/*.db
+data/uploads/
+logs/
+models/
+*.db
+*.sqlite
+*.sqlite3
+*.corrupt-*.db
+.hmac_key
+settings.json
+GayatriAI/
+ignored_assets/
+
+# Secrets & environment
+.env
+.env.*
+*.env
+secrets.enc
+*.key
+*.pem
+*.cert
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary & scratch scripts
+scratch/
+temp/
+tmp/
+
+# Private Local MVP Directories (Section 2 Master Plan)
+.private/
+local_data/
+private_data/
+knowledge_private/
+training_private/
+demo_private/
+student_data/
+chat_logs/
+evaluation_private/
+models_local/
+embeddings_local/
+indexes_local/
+PRIVATE_WORK/
+
+# Model formats
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+
+# Local datasets & raw logs
+*.jsonl
+*.csv
