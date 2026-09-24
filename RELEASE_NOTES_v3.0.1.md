@@ -55,12 +55,11 @@ Generic AI chatbots fail in education because they **spoon-feed final numerical 
 
 1. **Native DLL Crash Eliminated (`llama-cpp-python` v0.3+):**
    - Implemented pre-import runtime hook resolving `ggml-base.dll`, `ggml-cpu.dll`, `ggml.dll`, and `llama.dll` properly inside the frozen bundle across all Windows versions.
-2. **90% Package Size Reduction:**
-   - Stripped unused debug WebEngine assets and software renderers.
-   - **Setup Installer shrank from 1.95 GB → 143 MB!**
-   - **Portable ZIP shrank from 2.04 GB → 210 MB!**
-3. **Automated 1-Click Model Placement:**
-   - Created `setup_model.bat` to automatically detect and stage `Gayatri-Tutor-SLM-Q4_K_M.gguf` from the user's `Downloads` folder in under 3 seconds.
+2. **All-in-One Pre-Bundled Model Installer:**
+   - The Windows Setup installer (`.exe`) and portable package (`.zip`) now come with the 379 MB Socratic SLM model pre-bundled inside them.
+   - Zero secondary downloads and zero manual model placement needed—1-click install and immediately launch.
+3. **Optimized Package Footprint:**
+   - Stripped unused debug WebEngine assets and software renderers, keeping the total all-in-one distribution (~512 MB) over 70% smaller than previous releases while containing the complete model.
 4. **Clean Installation Experience:**
    - Eliminated command prompt terminal pop-up after setup wizard completes.
 5. **Modern Animated Splash Screen:**
