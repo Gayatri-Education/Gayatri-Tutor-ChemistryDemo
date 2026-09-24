@@ -23,27 +23,26 @@ This guide takes you from zero to full offline operation in under 2 minutes, fol
 
 Gayatri runs completely self-contained. **No Python, no Git, no command line, and no GPU are required.**
 
-### Step 1: Download Release Assets
-From the [Official Release Page](https://github.com/Gayatri-Education/Gayatri-Tutor-ChemistryDemo/releases/latest), download two files to your `Downloads` folder:
-1. **The Application Package:**
-   - **Option A (Setup Wizard):** `Gayatri_Chemistry_Tutor_v3.0.1_Setup.exe` (143 MB)
-   - **Option B (Portable ZIP):** `Gayatri_Chemistry_Tutor_Portable_v3.0.1.zip` (210 MB)
-2. **The Socratic Model Weights:**
-   - `Gayatri-Tutor-SLM-Q4_K_M.gguf` (379 MB)
+### Step 1: Download Release Package
+From the [Official Release Page](https://github.com/Gayatri-Education/Gayatri-Tutor-ChemistryDemo/releases/latest), download your preferred package:
+- **Option A (All-in-One Setup Wizard - Recommended):**  
+  `Gayatri_Chemistry_Tutor_v3.0.1_Setup.exe` (~512 MB)  
+  *Contains the application, WebEngine, and pre-bundled fine-tuned Socratic SLM model in a single 1-click executable.*
+- **Option B (All-in-One Portable ZIP):**  
+  `Gayatri_Chemistry_Tutor_Portable_v3.0.1.zip` (~578 MB)  
+  *Zero-installation portable archive with the pre-bundled SLM model included.*
 
 ### Step 2: Install or Extract
 - **If you chose Setup Wizard (.exe):**  
-  Double-click `Gayatri_Chemistry_Tutor_v3.0.1_Setup.exe`. Follow the setup wizard to install the application. It will automatically create a Desktop shortcut with the lotus icon.
+  Double-click `Gayatri_Chemistry_Tutor_v3.0.1_Setup.exe`. Follow the wizard prompts to install. It automatically creates a Desktop shortcut with the lotus icon.
 - **If you chose Portable ZIP (.zip):**  
   Right-click `Gayatri_Chemistry_Tutor_Portable_v3.0.1.zip` $\to$ **Extract All...** to any folder (e.g., your Desktop or a USB drive).
 
-### Step 3: Model Setup (Automated 1-Click)
-- In the installed application folder (or extracted portable folder), double-click **`setup_model.bat`**.
-- It will automatically detect `Gayatri-Tutor-SLM-Q4_K_M.gguf` in your `Downloads` folder and install it into place in 3 seconds.
-
-### Step 4: Launch Gayatri
+### Step 3: Launch & Learn
 - Double-click the **`Gayatri Chemistry Tutor`** desktop shortcut (or `Gayatri_Chemistry_Tutor.exe` in the portable folder).
-- The elegant frameless splash screen will initialize the neural weights and launch you straight into the Socratic tutoring workspace.
+- The application launches instantly with the fine-tuned Socratic model pre-loaded and ready to teach!
+
+*(Note: `setup_model.bat` is included in the directory as a fallback utility, but is not needed since the model is already pre-installed).*
 
 ---
 

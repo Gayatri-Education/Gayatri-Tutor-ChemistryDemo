@@ -65,26 +65,20 @@ Generic AI chatbots fail in education because they **spoon-feed final numerical 
 
 | Asset | Format | File Size | Description |
 |---|---|---|---|
-| **[`Gayatri_Chemistry_Tutor_v3.0.1_Setup.exe`](https://github.com/Gayatri-Education/Gayatri-Tutor-ChemistryDemo/releases/download/v3.0.1/Gayatri_Chemistry_Tutor_v3.0.1_Setup.exe)** | Windows Installer | **143.4 MB** | **Standard Installer:** Setup wizard that installs to local user directory (no admin rights needed), creates Desktop & Start Menu shortcuts with lotus branding, and includes an uninstaller. |
-| **[`Gayatri_Chemistry_Tutor_Portable_v3.0.1.zip`](https://github.com/Gayatri-Education/Gayatri-Tutor-ChemistryDemo/releases/download/v3.0.1/Gayatri_Chemistry_Tutor_Portable_v3.0.1.zip)** | Portable ZIP | **210.3 MB** | **Zero-Install Portable:** Extract to any folder or USB pen drive and run `Gayatri_Chemistry_Tutor.exe`. 100% self-contained with no registry footprint. |
-| **[`Gayatri-Tutor-SLM-Q4_K_M.gguf`](https://github.com/Gayatri-Education/Gayatri-Tutor-ChemistryDemo/releases/download/v3.0.1/Gayatri-Tutor-SLM-Q4_K_M.gguf)** | Model Weights | **379.4 MB** | Fine-tuned 0.5B Socratic Small Language Model weights. |
+| **[`Gayatri_Chemistry_Tutor_v3.0.1_Setup.exe`](https://github.com/Gayatri-Education/Gayatri-Tutor-ChemistryDemo/releases/download/v3.0.1/Gayatri_Chemistry_Tutor_v3.0.1_Setup.exe)** | Windows Installer | **511.7 MB** | **All-in-One Installer (Recommended):** Setup wizard with the fine-tuned 0.5B Socratic SLM model pre-bundled inside it! Installs to user directory, creates Desktop & Start Menu shortcuts with lotus branding, and includes an uninstaller. Zero separate model download needed. |
+| **[`Gayatri_Chemistry_Tutor_Portable_v3.0.1.zip`](https://github.com/Gayatri-Education/Gayatri-Tutor-ChemistryDemo/releases/download/v3.0.1/Gayatri_Chemistry_Tutor_Portable_v3.0.1.zip)** | Portable ZIP | **577.7 MB** | **All-in-One Portable:** Extract to any folder or USB pen drive and run `Gayatri_Chemistry_Tutor.exe`. 100% self-contained with pre-bundled model and no registry footprint. |
+| **[`Gayatri-Tutor-SLM-Q4_K_M.gguf`](https://github.com/Gayatri-Education/Gayatri-Tutor-ChemistryDemo/releases/download/v3.0.1/Gayatri-Tutor-SLM-Q4_K_M.gguf)** | Model Weights | **379.4 MB** | Standalone 0.5B Socratic SLM weights (for LM Studio, Ollama, or Python deployments). |
 | **[`SHA256SUMS.txt`](https://github.com/Gayatri-Education/Gayatri-Tutor-ChemistryDemo/releases/download/v3.0.1/SHA256SUMS.txt)** | Checksums | 1 KB | Cryptographic SHA-256 integrity verification hashes. |
 | **[`GETTING_STARTED_GUIDE.md`](GETTING_STARTED_GUIDE.md)** | User Guide | 5 KB | Quick start guide and 6 interactive hands-on learning exercises. |
 
 ---
 
-## 🚀 2-Minute Quick Start
+## 🚀 1-Click Quick Start
 
-1. **Download Application & Model:**
-   - Download either the **Setup Installer** (`.exe`) or **Portable ZIP** (`.zip`).
-   - Download the model weights: **`Gayatri-Tutor-SLM-Q4_K_M.gguf`** (379 MB) to your `Downloads` folder.
-2. **Setup:**
-   - **Installer:** Run the setup executable and follow the wizard prompts.
-   - **Portable:** Extract the ZIP file into any folder.
-3. **1-Click Model Placement:**
-   - Double-click **`setup_model.bat`** in the application directory. It will auto-detect the model in your `Downloads` folder and install it in seconds.
-4. **Launch & Learn:**
-   - Double-click the desktop shortcut or `Gayatri_Chemistry_Tutor.exe`.
+1. Download **`Gayatri_Chemistry_Tutor_v3.0.1_Setup.exe`** (or the Portable ZIP).
+2. Run the installer (or extract the portable ZIP).
+3. Double-click the **`Gayatri Chemistry Tutor`** desktop shortcut.
+4. The application launches immediately with the Socratic AI model pre-loaded!
 
 > 💡 **For a guided walkthrough of the 6 core Socratic capabilities, read the [Getting Started & Hands-On Walkthrough Guide](GETTING_STARTED_GUIDE.md).**
 
@@ -139,9 +133,10 @@ Get-FileHash Gayatri_Chemistry_Tutor_v3.0.1_Setup.exe -Algorithm SHA256
 
 | File Name | SHA-256 Integrity Hash |
 |---|---|
-| `Gayatri_Chemistry_Tutor_v3.0.1_Setup.exe` | `89eb2e60dbeff15e30d9ad84f34747c8451febe218b333181d156daeb6d99e1c` |
-| `Gayatri_Chemistry_Tutor_Portable_v3.0.1.zip` | `c252efafef3bf47519f1740764a91f49d7713d858f4d497546c4070dd785e19f` |
+| `Gayatri_Chemistry_Tutor_v3.0.1_Setup.exe` | `277a6341b659e12c6ec3933a6c65b1af68d1332c3b57c617c38340385637d2bf` |
+| `Gayatri_Chemistry_Tutor_Portable_v3.0.1.zip` | `42d9fe33dc9cda38d3ff95dd52cbe7da7034fcbcdc4e1530b6246027ff8a87cf` |
 | `Gayatri-Tutor-SLM-Q4_K_M.gguf` | `eb4d05df2bf3eb7405d24742ade2622fc3f98b4be2b75d92dc2c00339d2b952b` |
+| `GETTING_STARTED_GUIDE.md` | `b2fc48634b0f65bae74caa027d9615d82ff11f732023753bafd406ef2da13628` |
 
 ---
 
