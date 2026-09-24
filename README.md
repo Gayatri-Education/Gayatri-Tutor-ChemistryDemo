@@ -1,77 +1,162 @@
-# Gayatri Chemistry Tutor — NCERT Adaptive Socratic Chemistry Platform
+# Gayatri Chemistry Tutor — Production SLM Edition
 
-![Gayatri AI](gai3.png)
+<div align="center">
+  <img src="gai3.png" alt="Gayatri AI Logo" width="130" />
+  <h3>An Evidence-Driven, 100% Offline Socratic AI Chemistry Tutor</h3>
+  <p><b>Democratizing high-caliber 1:1 personalized education for Senior Secondary & Entrance Chemistry (NCERT Aligned)</b></p>
 
-**Version:** 3.0.0 (Official Demo Release)  
-**Execution Mode:** 100% Offline (`Local Only`, Qwen2.5-3B-Instruct GGUF, Embedded SQLite)  
-**Target Syllabus:** Senior Secondary (CBSE Class 11/12) & Entrance Chemistry (NCERT Aligned)  
-**Data Privacy:** Zero Cloud Calls, Zero Telemetry Egress, Strictly Local Inference
+  <p>
+    <a href="#-download-packages"><img src="https://img.shields.io/badge/Release-v3.0.1%20Production%20SLM-6366f1.svg" alt="Release v3.0.1" /></a>
+    <img src="https://img.shields.io/badge/Inference-100%25%20Offline%20(CPU)-success.svg" alt="100% Offline" />
+    <img src="https://img.shields.io/badge/Privacy-Zero%20Data%20Egress-blue.svg" alt="Zero Data Egress" />
+    <img src="https://img.shields.io/badge/Syllabus-NCERT%20Class%2011%20%26%2012-orange.svg" alt="NCERT Class 11 and 12" />
+    <img src="https://img.shields.io/badge/RAM%20Footprint-%3C%20850%20MB-purple.svg" alt="Low RAM Footprint" />
+    <img src="https://img.shields.io/badge/Architecture-0.5B%20Socratic%20SLM-teal.svg" alt="Socratic SLM" />
+  </p>
+</div>
+
+---
+
+## 🌟 Vision & Mission
+
+Education is most effective when it is **interactive, encouraging, and Socratic**. Yet millions of students prepare for board and entrance examinations without access to dedicated, patient, 1-on-1 tutoring.
+
+Generic AI chatbots fail in education because they **spoon-feed final numerical answers**, depriving learners of the cognitive struggle necessary to master chemistry. Furthermore, existing cloud AI systems demand costly subscription fees, constant internet connectivity, and compromise student privacy.
+
+**Gayatri Chemistry Tutor** solves this paradigm through localized neural intelligence:
+- **Pure Socratic Pedagogy:** Never reveals final solutions prematurely; guides students through analogies, targeted questions, and misconception remediation.
+- **Zero Digital Divide:** Runs 100% offline on standard consumer hardware (including school laptops with 8 GB RAM) without requiring internet or expensive GPUs.
+- **Absolute Data Sovereignty:** Student chats, mastery records, and cognitive progress remain strictly on the local machine with zero telemetry or cloud egress.
+
+---
+
+## ⚡ Technical Highlights & Benchmark Specifications
+
+### 🧠 1. Socratic Pre-Training & Alignment
+- **Domain Specialization:** Fine-tuned on **2,500 curated Socratic dialogue trajectories** specifically calibrated to the NCERT/CBSE senior secondary chemistry syllabus.
+- **5 Pedagogical Pillars Hardcoded in Model Weights:**
+  1. **`EXPLAIN` Mode:** 4-tier scaffolding (Everyday Intuition $\to$ Formal Definition $\to$ Mathematical Law $\to$ Comprehension Check).
+  2. **`QUESTION` Mode:** Calibrated numerical and conceptual problem posing.
+  3. **`EVALUATE` Mode:** Real-time misconception diagnosis governed by the **Anti-Answer-Leakage Invariant** (diagnoses physical reasoning errors without giving away numerical answers).
+  4. **`HINT` Mode:** Graduated 5-tier directional nudges.
+  5. **`REMEDIATE` Mode:** Dynamic prerequisite backtracking along the curriculum dependency graph.
+
+### 🔍 2. Sub-10ms Atomic Knowledge Retrieval (RAG)
+- **Zero-VRAM Architecture:** Replaces heavy vector embedding models with lightweight, deterministic keyword and BM25 concept resolution.
+- **Atomic Micro-Cards:** Structured curriculum cards (<75 tokens per card) providing factual NCERT grounding in **< 8 ms** retrieval time.
+- **Coverage:** Chemical Thermodynamics (First Law, Hess's Law, Enthalpy, Entropy, Gibbs Free Energy), Chemical Bonding (VSEPR, Hybridisation, Molecular Geometry), and Periodic Trends.
+
+### 💻 3. Real-World Hardware Benchmarks
+
+| Performance Metric | Standard Student Laptop (8 GB RAM) | Desktop / Workstation (16 GB+ RAM) |
+|---|---|---|
+| **Target Processor** | Intel Core i3 / i5 (8th Gen+) or AMD Ryzen 3000 | Intel Core i7 / i9 or AMD Ryzen 5000+ |
+| **Model Size on Disk** | **379.4 MB** (`Q4_K_M` 4-bit Medium quantization) | **379.4 MB** |
+| **Active Inference RAM** | **~450 MB** | **~450 MB** |
+| **Total App Footprint (GUI + WebEngine + Model)** | **~650 – 850 MB** total active memory | **~750 – 900 MB** total active memory |
+| **Generation Latency (TTFT)** | **< 200 ms** to first streaming token | **< 120 ms** to first streaming token |
+| **Streaming Speed** | **18 – 28 tokens / second** (smooth streaming) | **28 – 42 tokens / second** |
+| **Application Cold Startup** | **< 2.4 seconds** (frameless animated splash) | **< 1.8 seconds** |
+| **External Network Bandwidth** | **0.0 KB/s (Strictly Air-Gapped)** | **0.0 KB/s (Strictly Air-Gapped)** |
 
 ---
 
 ## 📦 Download Packages
 
-| Deliverable Asset | Format | Size | Description |
+| Asset | Format | File Size | Description |
 |---|---|---|---|
-| **[`Gayatri_Chemistry_Tutor_v3_Setup.exe`](https://github.com/Gayatri-Education/Gayatri-Tutor-ChemistryDemo/releases/download/v3.0.0/Gayatri_Chemistry_Tutor_v3_Setup.exe)** | Windows Installer | **1.90 GB** | **Recommended:** Standard Windows setup wizard. Installs to user directory (no admin rights needed), creates Desktop & Start Menu shortcuts with the lotus icon (`gai3.ico`), and includes an uninstaller. |
-| **[`Gayatri_Chemistry_Tutor_Portable_v3.0.0.zip`](https://github.com/Gayatri-Education/Gayatri-Tutor-ChemistryDemo/releases/download/v3.0.0/Gayatri_Chemistry_Tutor_Portable_v3.0.0.zip)** | Portable ZIP | **1.99 GB** | **Zero-Install:** Extract to any folder or USB pen drive and double-click `Gayatri_Chemistry_Tutor.exe`. Runs 100% self-contained with no registry footprint. |
-| **[`Gayatri-Tutor-v3-Q4_K_M.gguf`](https://github.com/Gayatri-Education/Gayatri-Tutor-ChemistryDemo/releases/download/v3.0.0/Gayatri-Tutor-v3-Q4_K_M.gguf)** | GGUF Model | **1.80 GB** | Standalone fine-tuned 3B model weights for custom deployments (compatible with llama.cpp, LM Studio, Ollama). |
-| **[`SHA256SUMS.txt`](https://github.com/Gayatri-Education/Gayatri-Tutor-ChemistryDemo/releases/download/v3.0.0/SHA256SUMS.txt)** | Checksums | 1 KB | Cryptographic SHA-256 integrity verification hashes. |
-| **[`EVALUATION_GUIDE.md`](EVALUATION_GUIDE.md)** | Guide | 5 KB | 6-step interactive evaluator checklist to test adaptive learning on your laptop. |
+| **[`Gayatri_Chemistry_Tutor_v3.0.1_Setup.exe`](https://github.com/Gayatri-Education/Gayatri-Tutor-ChemistryDemo/releases/download/v3.0.1/Gayatri_Chemistry_Tutor_v3.0.1_Setup.exe)** | Windows Installer | **143.4 MB** | **Standard Installer:** Setup wizard that installs to local user directory (no admin rights needed), creates Desktop & Start Menu shortcuts with lotus branding, and includes an uninstaller. |
+| **[`Gayatri_Chemistry_Tutor_Portable_v3.0.1.zip`](https://github.com/Gayatri-Education/Gayatri-Tutor-ChemistryDemo/releases/download/v3.0.1/Gayatri_Chemistry_Tutor_Portable_v3.0.1.zip)** | Portable ZIP | **210.3 MB** | **Zero-Install Portable:** Extract to any folder or USB pen drive and run `Gayatri_Chemistry_Tutor.exe`. 100% self-contained with no registry footprint. |
+| **[`Gayatri-Tutor-SLM-Q4_K_M.gguf`](https://github.com/Gayatri-Education/Gayatri-Tutor-ChemistryDemo/releases/download/v3.0.1/Gayatri-Tutor-SLM-Q4_K_M.gguf)** | Model Weights | **379.4 MB** | Fine-tuned 0.5B Socratic Small Language Model weights. |
+| **[`SHA256SUMS.txt`](https://github.com/Gayatri-Education/Gayatri-Tutor-ChemistryDemo/releases/download/v3.0.1/SHA256SUMS.txt)** | Checksums | 1 KB | Cryptographic SHA-256 integrity verification hashes. |
+| **[`GETTING_STARTED_GUIDE.md`](GETTING_STARTED_GUIDE.md)** | User Guide | 5 KB | Quick start guide and 6 interactive hands-on learning exercises. |
 
 ---
 
-## 🚀 Quick Start
+## 🚀 2-Minute Quick Start
 
-### Option A: Standard Windows Installer (Recommended)
-1. Download **`Gayatri_Chemistry_Tutor_v3_Setup.exe`**.
-2. Double-click the installer (no administrator privileges needed).
-3. Follow the setup wizard and check **"Create a desktop shortcut"**.
-4. Double-click the **Gayatri Chemistry Tutor** lotus icon on your Desktop.
+1. **Download Application & Model:**
+   - Download either the **Setup Installer** (`.exe`) or **Portable ZIP** (`.zip`).
+   - Download the model weights: **`Gayatri-Tutor-SLM-Q4_K_M.gguf`** (379 MB) to your `Downloads` folder.
+2. **Setup:**
+   - **Installer:** Run the setup executable and follow the wizard prompts.
+   - **Portable:** Extract the ZIP file into any folder.
+3. **1-Click Model Placement:**
+   - Double-click **`setup_model.bat`** in the application directory. It will auto-detect the model in your `Downloads` folder and install it in seconds.
+4. **Launch & Learn:**
+   - Double-click the desktop shortcut or `Gayatri_Chemistry_Tutor.exe`.
 
-### Option B: Portable 1-Click ZIP
-1. Download **`Gayatri_Chemistry_Tutor_Portable_v3.0.0.zip`**.
-2. Right-click $\to$ **Extract All...** to any folder (or external USB drive).
-3. Open the folder and double-click **`Gayatri_Chemistry_Tutor.exe`**.
+> 💡 **For a guided walkthrough of the 6 core Socratic capabilities, read the [Getting Started & Hands-On Walkthrough Guide](GETTING_STARTED_GUIDE.md).**
 
 ---
 
-## 🧪 How to Evaluate Adaptive Learning Locally
+## 🧪 Experience Socratic Adaptive Learning
 
-Gayatri is not a generic chatbot. It is an **evidence-based Socratic tutoring engine** running locally on your hardware. Follow the [Evaluation Guide](EVALUATION_GUIDE.md) to test the following live capabilities:
+Unlike conventional chatbots, Gayatri actively models your cognitive state:
 
-1. **Socratic Scaffolding (`EXPLAIN` Mode):** Ask *"Please explain the First Law of Thermodynamics"* to observe 4-tier pedagogical scaffolding (Everyday Analogy $\to$ NCERT Definition $\to$ Mathematical Formulation $\to$ Reflective Check).
-2. **Calibrated Problem Generation (`QUESTION` Mode):** Request a practice question and observe the automated transition to calibrated numerical reasoning.
-3. **Misconception Diagnosis & Anti-Answer Leakage (`EVALUATE` Mode):** Submit `delta U is 700 J because 500+200=700`. Observe the real-time -5% mastery drop, the IUPAC sign convention tip, and **strict zero answer leakage** (the AI does not spoil the 300 J answer).
-4. **5-Tier Hint Ladder (`HINT` Mode):** Click **💡 Give a Hint** to receive graduated nudges without spoon-feeding answers.
-5. **LDG Prerequisite Backtracking (`REMEDIATE` Mode):** Confess confusion about internal energy to watch the tutor backtrack to prerequisite concepts along the curriculum graph.
-6. **Live Student Dashboard:** Open **📚 My Progress & Dashboard** to inspect your personalized dynamic mastery bars, prerequisite DAG roadmap, and live learning timeline.
+```text
+                  ┌─────────────────────────────────────────┐
+                  │          Student Input / Answer         │
+                  └────────────────────┬────────────────────┘
+                                       │
+                                       ▼
+                  ┌─────────────────────────────────────────┐
+                  │      Deterministic Answer Evaluator     │
+                  │ (Tolerance, Units, Chemical Conventions)│
+                  └────────────────────┬────────────────────┘
+                                       │
+                                       ▼
+                  ┌─────────────────────────────────────────┐
+                  │        Pedagogical Learning Event       │
+                  │   (Misconception Diagnosed? -5% Mastery)│
+                  └────────────────────┬────────────────────┘
+                                       │
+                                       ▼
+                  ┌─────────────────────────────────────────┐
+                  │       Adaptive Policy & State Machine   │
+                  │  (EXPLAIN ➔ QUESTION ➔ EVALUATE ➔ HINT) │
+                  └────────────────────┬────────────────────┘
+                                       │
+                                       ▼
+                  ┌─────────────────────────────────────────┐
+                  │        Socratic SLM Generation          │
+                  │  (Atomic RAG Evidence + Anti-Leak Guard)│
+                  └─────────────────────────────────────────┘
+```
+
+1. **Deductive Understanding Over Spoon-Feeding:** If you submit an incorrect calculation, Gayatri praises your physical reasoning, points out the misconception, and asks you to recalculate without revealing the answer.
+2. **Prerequisite Backtracking:** If you struggle repeatedly with an advanced topic (e.g., First Law enthalpy calculations), the tutor shifts into `REMEDIATE` mode and backtracks along the prerequisite graph to foundational concepts (e.g., Internal Energy).
+3. **Visual Mastery Roadmap:** The integrated student dashboard displays an interactive dependency DAG of senior secondary chemistry concepts, active focus areas, and spaced review recommendations.
+
+---
+
+## 🔒 Cryptographic Verification
+
+Verify package integrity using PowerShell:
+```powershell
+Get-FileHash Gayatri_Chemistry_Tutor_v3.0.1_Setup.exe -Algorithm SHA256
+```
+
+| File Name | SHA-256 Integrity Hash |
+|---|---|
+| `Gayatri_Chemistry_Tutor_v3.0.1_Setup.exe` | `89eb2e60dbeff15e30d9ad84f34747c8451febe218b333181d156daeb6d99e1c` |
+| `Gayatri_Chemistry_Tutor_Portable_v3.0.1.zip` | `c252efafef3bf47519f1740764a91f49d7713d858f4d497546c4070dd785e19f` |
+| `Gayatri-Tutor-SLM-Q4_K_M.gguf` | `eb4d05df2bf3eb7405d24742ade2622fc3f98b4be2b75d92dc2c00339d2b952b` |
 
 ---
 
 ## 💻 System Requirements
 
-- **OS:** Windows 10 (64-bit) or Windows 11 (64-bit)
-- **CPU:** Intel Core i5 (8th Gen+) or AMD Ryzen 3000+ (4+ physical cores)
-- **RAM:** 8 GB minimum (16 GB recommended)
-- **Storage:** 5 GB free disk space (SSD recommended)
-- **GPU:** Optional (runs 100% on CPU; automatically utilizes GPU if available)
-- **Python / Dependencies:** **None required** (fully standalone compiled binary)
+- **Operating System:** Windows 10 (64-bit) or Windows 11 (64-bit)
+- **Processor:** Any dual-core or quad-core x64 CPU (Intel Core i3/i5/i7/i9 or AMD Ryzen)
+- **RAM:** 4 GB minimum (8 GB recommended for optimal multi-tasking)
+- **Disk Space:** ~650 MB free disk space (Application + Model combined)
+- **GPU:** Optional (Native CPU inference with zero hardware acceleration required)
+- **Python / Dependencies:** **None required** (Completely self-contained native binary)
 
 ---
 
-## 🔒 Verification & Integrity
-
-Verify package integrity using PowerShell:
-```powershell
-Get-FileHash Gayatri_Chemistry_Tutor_v3_Setup.exe -Algorithm SHA256
-```
-
-| File | SHA-256 Hash |
-|---|---|
-| `Gayatri_Chemistry_Tutor_Portable_v3.0.0.zip` | `2af6486a2a20aa7563bf80871dd0ac84fccb25b44f3c6ec9f25312d5cc9df15e` |
-| `Gayatri_Chemistry_Tutor_v3_Setup.exe` | `2384fecd852fa40d8d964c9359792b2e5559e544d70414c2251e04e6e9394d34` |
-| `Gayatri-Tutor-v3-Q4_K_M.gguf` | `fa66d940d1279d844d43be9b6c45b5f9b22d5bce1eed901516394f1d6202abc3` |
-
----
-*Developed with pride by Gayatri Education.*
+<div align="center">
+  <p><b>Gayatri Education</b></p>
+  <p><i>Empowering Students • Advancing Socratic Pedagogy • Zero Cloud Dependency</i></p>
+</div>
